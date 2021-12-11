@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="SerialDeviceExample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SerialDeviceExample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="RefreshList"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" Margin="0,50,0,0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="Device LIST:" Margin="0,5,10,0" FontSize="18"/>
+                <ComboBox Name="cbListDevices" FontSize="18" Margin="0,0,10,0"/>
+                <Button Content="Refresh List" Click="RefreshList" />
+            </StackPanel>
+            <Button Name="btConfigPort" Content="Configure Port" Click="click_ConfigPort" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,10,0,0">
+                <TextBox Name="tbSendString" FontSize="18" Width="200" Margin="0,0,10,0"/>
+                <Button Name="btSendString" Content="Send String" Click="click_SendString"/>
+            </StackPanel>
+            <Button Name="btReadSerial" Content="Read Port" Click="click_ReadSerial" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+            <TextBlock Name="tbReceivedSerial" Text="" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>
